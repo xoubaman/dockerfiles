@@ -6,6 +6,8 @@ Another personal Dockerfiles and Docker images repository.
 
 Available tags:
 
+* xoubaman/php:7.2-dev
+* xoubaman/php:7.3-dev
 * xoubaman/php:7.4-dev
 
 Based on php fpm alpine with **Xdebug** enabled.

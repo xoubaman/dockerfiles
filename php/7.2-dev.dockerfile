@@ -15,14 +15,14 @@ RUN wget -O phive.phar https://phar.io/releases/phive.phar \
     && rm phive.phar.asc
 
 RUN phive install composer-require-checker  -g --trust-gpg-keys D2CCAC42F6295E7D
-RUN phive install composer/composer         -g --force-accept-unsigned
+RUN phive install composer/composer         -g --trust-gpg-keys CBB3D576F2A0946F
 RUN phive install deptrac                   -g --trust-gpg-keys EB008C0F094A779B
 RUN phive install infection                 -g --trust-gpg-keys C5095986493B4AA0
 RUN phive install php-cs-fixer              -g --trust-gpg-keys E82B2FB314E9906E
 RUN phive install phpcs                     -g --trust-gpg-keys 31C7E470E2138192
 RUN phive install phpstan                   -g --trust-gpg-keys CF1A108D0E7AE720
 RUN phive install phpunit                   -g --trust-gpg-keys 4AA394086372C20A
-RUN phive install psalm                     -g --trust-gpg-keys 8A03EA3B385DBAA1
+RUN phive install psalm                     -g --trust-gpg-keys 12CE0F1D262429A5
 
 RUN mkdir /app
 RUN addgroup -S user && adduser -S user -G user
